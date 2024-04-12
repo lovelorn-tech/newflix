@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewFlix - Auth</title>
+    <link rel="stylesheet" href="./styles/pages/auth.css">
+    <script
+      src="https://kit.fontawesome.com/a450a5d4a6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="auth-page">
+      <img src="./assets/img/background.webp" alt="auth background" />
+      <div class="auth-left" id="auth-left">
+        <form id="signup-form" onsubmit="(e) => onSignupSubmit(e)">
+          <h2>Registrarse</h2>
+          <div class="input-container">
+            <label for="input-email-signup">Correo electrónico</label>
+            <input
+              type="email"
+              placeholder="abc@correo.com"
+              id="input-email-signup"
+              name="input-email-signup"
+            />
+            <small id="small-email-signup"
+              >El correo electrónico no posee el formato correcto. Debe tener el
+              siguiente formato 'abc@correo.com'</small
+            >
+          </div>
+          <div class="input-container">
+            <label for="input-password-signup">Contraseña</label>
+            <input
+              type="password"
+              placeholder="••••••••••"
+              id="input-password-signup"
+              name="input-password-signup"
+            />
+            <small id="small-password-signup"
+              >La contraseña no posee el formato correcto. Debe tener al menos
+              una letra mayúscula, una minúscula, un número, un caracter
+              especial y entre 12 y 30 caracteres.</small
+            >
+          </div>
+          <div class="input-container">
+            <label for="input-password2-signup">Repetir contraseña</label>
+            <input
+              type="password"
+              placeholder="••••••••••"
+              id="input-password2-signup"
+              name="input-password2-signup"
+            />
+            <small id="small-password2-signup"
+              >La contraseña no posee el formato correcto. Debe tener al menos
+              una letra mayúscula, una minúscula, un número, un caracter
+              especial y entre 12 y 30 caracteres.</small
+            >
+          </div>
+          <div class="input-container">
+            <label for="input-nickname-signup">Apodo</label>
+            <input
+              type="text"
+              placeholder="Soy metatrón"
+              id="input-nickname-signup"
+              name="input-nickname-signup"
+            />
+            <small id="small-nickname-signup"
+              >El apodo debe tener solamente caracteres alfanuméricos y
+              espacios; Debe tener entre 4 y 20 caracteres (incluidos los
+              espacios).</small
+            >
+          </div>
+          <button disabled class="btn-submit" type="submit">Registrarse</button>
+          <button class="btn-swap" type="button" onclick="swapForms()">
+            Iniciar sesión <i class="fa-solid fa-angles-right"></i
+            ><i class="fa-solid fa-angles-right"></i>
+          </button>
+        </form>
+        <article id="article-login">
+          <p>
+            Tus series y películas en un solo lugar cuando y donde quieras.
+            Regístrate o inicia sesión para disfrutar de nuestros contenidos
+            ahora mismo. Además, podrás acceder a los siguientes beneficios:
+          </p>
+          <ol>
+            <li>1. Ver tus series y películas cuando y donde quieras. (Requiere acceso a internet).</li>
+            <li>
+              2. Contenido libre de publicidad y cortes.
+            </li>
+            <li>
+              3. Opinar sobre tus películas favorias.
+            </li>
+            <li>
+              4. Acceso a contenido en alta calidad HD y contenido exclusivo
+              para usuarios registrados.
+            </li>
+            <li>5. Y mucho más...</li>
+          </ol>
+        </article>
+      </div>
+      <div class="auth-right" id="auth-right">
+        <article id="article-signup">
+          Creá una cuenta ahora para empezar a ver tus series y películas
+          favoritas, opinar sobre ellos y ver todo lo que tenemos preparado para
+          ti.
+        </article>
+        <form id="login-form" onsubmit="onLoginSubmit()" method="post">
+          <h2>Iniciar sesión</h2>
+          <div class="input-container">
+            <label for="input-email-login">Correo electrónico</label>
+            <input
+              type="email"
+              placeholder="abc@correo.com"
+              id="input-email-login"
+              name="input-email-login"
+            />
+            <small id="small-email-login"
+              >El correo electrónico no posee el formato correcto. Debe tener el
+              siguiente formato 'abc@correo.com'</small
+            >
+          </div>
+          <div class="input-container">
+            <label for="input-password-login">Contraseña</label>
+            <input
+              type="password"
+              placeholder="••••••••••"
+              id="input-password-login"
+              name="input-password-login"
+            />
+            <small id="small-password-login"
+              >La contraseña no posee el formato correcto. Debe tener al menos
+              una letra mayúscula, una minúscula, un número, un caracter
+              especial y entre 12 y 30 caracteres.</small
+            >
+          </div>
+          <button
+            disabled
+            id="btn-login-submit"
+            class="btn-submit"
+            type="submit"
+          >
+            Ingresar
+          </button>
+          <button class="btn-swap" type="button" onclick="swapForms()">
+            <i class="fa-solid fa-angles-left"></i
+            ><i class="fa-solid fa-angles-left"></i>
+            Registrarse
+          </button>
+        </form>
+      </div>
+    </main>
+    <script type="text/javascript" src="./scripts/pages/auth.js" defer></script>
+  </body>
+</html>

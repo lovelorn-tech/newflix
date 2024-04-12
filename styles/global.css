@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+:root {
+  --dark: hsla(231, 30%, 7%, 1);
+  --light: hsla(231, 0%, 97%, 1);
+  --primary: hsla(360, 100%, 50%, 1);
+  --secondary: hsla(209, 100%, 40%, 1);
+  --accent: hsla(231, 10%, 15%, 1);
+  --hover-soft: hsla(0, 0%, 40%, 0.3);
+  --hover-hard: hsla(0, 0%, 40%, 0.6);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "nunito", sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  width: 100%;
+  max-width: 120rem;
+  background-color: var(--dark);
+}

@@ -1,0 +1,52 @@
+@import "../global.css";
+@import "../main.css";
+@import "../components/video.css";
+
+.home-page {
+  width: calc(100% - 1.25rem);
+  padding: 3.75rem 0.625rem 0 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.movies-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1.5rem 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.movies-container > h3 {
+  font-size: 1.5em;
+  color: var(--light);
+  padding: 0.125em 0.625em;
+}
+
+.movie-list {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.625rem 0;
+}
+
+.movies-container::-webkit-scrollbar {
+  height: 0.625rem;
+}
+
+.movies-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.movies-container::-webkit-scrollbar-track {
+  background-color: var(--hover-soft);
+  border-radius: 0.625rem;
+}
+
+.movies-container::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 0.625rem;
+}
