@@ -1,7 +1,7 @@
 let documentReady = false;
 
 async function importJSFiles() {
-  const moviesResponse = fetch("./mocks/videos.json");
+  const moviesResponse = fetch("./newflix/mocks/videos.json");
   const videoServiceResponse = import("../components/video.js");
   const headerServiceResponse = import("../components/header.js");
   const navServiceResponse = import("../components/nav.js");
