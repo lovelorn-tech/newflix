@@ -85,7 +85,7 @@ const onLoginSubmit = async (e) => {
     const loginSuccess = await (
       await import("../services/auth.js")
     ).authService.login(login);
-    if (loginSuccess[0]) window.open("/", "_self");
+    if (loginSuccess[0]) window.open("/newflix", "_self");
     else alert(loginSuccess[1]);
   } else
     alert(

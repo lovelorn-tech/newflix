@@ -116,7 +116,7 @@ export const headerService = {
       .getElementById("btn-logout")
       ?.addEventListener("click", async () => {
         await authService.logout();
-        window.open("/", "_self");
+        window.open("/newflix", "_self");
       });
   },
 };
