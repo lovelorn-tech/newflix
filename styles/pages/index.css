@@ -4,7 +4,7 @@
 
 .home-page {
   width: calc(100% - 1.25rem);
-  padding: 3.75rem 0.625rem 0 0.625rem;
+  padding: 3.75rem 0.625rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
