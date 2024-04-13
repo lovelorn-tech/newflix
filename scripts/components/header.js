@@ -23,10 +23,10 @@ export const headerService = {
           <p>${session?.nickname}</p>
         </div>
       </li>
-      <li><a href="/">Mi cuenta</a></li>
-      <li><a href="/">Biblioteca</a></li>
-      <li><a href="/">Mi suscripción</a></li>
-      <li><a href="/">Configuración</a></li>
+      <li><a href="/newflix">Mi cuenta</a></li>
+      <li><a href="/newflix">Biblioteca</a></li>
+      <li><a href="/newflix">Mi suscripción</a></li>
+      <li><a href="/newflix">Configuración</a></li>
       <li>
         <button id="btn-logout" class="btn-logout">
           <p>Cerrar sesión</p>
@@ -36,7 +36,7 @@ export const headerService = {
     } else {
       element = document.createElement("a");
       element.classList = "anchor-auth";
-      element.href = "/auth.html";
+      element.href = "/newflix/auth.html";
       element.innerHTML = `<i class="fa-solid fa-user"></i>`;
     }
     return element;

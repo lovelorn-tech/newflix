@@ -14,7 +14,7 @@ export const footerService = {
       <i class="fa-solid fa-user"></i>
       <p>Ingresar</p>
     `;
-      document.getElementById("footer-profile").href = "/auth.html";
+      document.getElementById("footer-profile").href = "/newflix/auth.html";
     }
     return element;
   },
