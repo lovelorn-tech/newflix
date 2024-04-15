@@ -4,69 +4,69 @@
     "views": "2.1M",
     "rating": "8.6",
     "duration": "133",
-    "thumbnail": "./mocks/img/thumbnail1.webp"
+    "thumbnail": "./mocks/img/thumbnail1.jpg"
   },
   {
     "title": "Movie title 2",
     "views": "7.3M",
     "rating": "7.9",
     "duration": "127",
-    "thumbnail": "./mocks/img/thumbnail2.webp"
+    "thumbnail": "./mocks/img/thumbnail2.jpg"
   },
   {
     "title": "Movie title 3",
     "views": "400K",
     "rating": "9.1",
     "duration": "144",
-    "thumbnail": "./mocks/img/thumbnail3.webp"
+    "thumbnail": "./mocks/img/thumbnail3.jpg"
   },
   {
     "title": "Movie title 4",
     "views": "3.5M",
     "rating": "9.8",
     "duration": "102",
-    "thumbnail": "./mocks/img/thumbnail4.webp"
+    "thumbnail": "./mocks/img/thumbnail4.jpg"
   },
   {
     "title": "Movie title 5",
     "views": "3.5M",
     "rating": "9.8",
     "duration": "102",
-    "thumbnail": "./mocks/img/thumbnail5.webp"
+    "thumbnail": "./mocks/img/thumbnail5.jpg"
   },
   {
     "title": "Movie title 6",
     "views": "3.5M",
     "rating": "9.8",
     "duration": "102",
-    "thumbnail": "./mocks/img/thumbnail6.webp"
+    "thumbnail": "./mocks/img/thumbnail6.jpg"
   },
   {
     "title": "Movie title 7",
     "views": "3.5M",
     "rating": "9.8",
     "duration": "102",
-    "thumbnail": "./mocks/img/thumbnail7.webp"
+    "thumbnail": "./mocks/img/thumbnail7.jpg"
   },
   {
     "title": "Movie title 8",
     "views": "3.5M",
     "rating": "9.8",
     "duration": "102",
-    "thumbnail": "./mocks/img/thumbnail8.webp"
+    "thumbnail": "./mocks/img/thumbnail8.jpg"
   },
   {
     "title": "Movie title 9",
     "views": "3.5M",
     "rating": "9.8",
     "duration": "102",
-    "thumbnail": "./mocks/img/thumbnail9.webp"
+    "thumbnail": "./mocks/img/thumbnail9.jpg"
   },
   {
     "title": "Movie title 10",
     "views": "3.5M",
     "rating": "9.8",
     "duration": "102",
-    "thumbnail": "./mocks/img/thumbnail10.webp"
+    "thumbnail": "./mocks/img/thumbnail10.jpg"
   }
 ]
