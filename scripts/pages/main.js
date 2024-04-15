@@ -20,6 +20,10 @@ function onLoad() {
     movieListElement.forEach((element) => {
       element.innerHTML = videoService.getVideoListHTML(movies);
     });
+
+    const movieFeedElement = document.getElementById('movie-list-feed');
+    movieFeedElement.innerHTML = videoService.getVideoListHTML(movies);
+
     const headerRightElement = document.getElementById("header-right");
     headerRightElement.appendChild(await headerService.getHeaderProfile());
     await headerService.addEvents();

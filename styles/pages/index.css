@@ -19,7 +19,7 @@
   overflow-y: hidden;
 }
 
-.movies-container > h3 {
+.movies-container > h3, .movies-container-feed > h3 {
   font-size: 1.5em;
   color: var(--light);
   padding: 0.125em 0.625em;
@@ -31,6 +31,21 @@
   align-items: center;
   justify-content: flex-start;
   padding: 0.625rem 0;
+}
+
+.movies-container-feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.movie-list-feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.625rem;
+  padding: 0.625rem 0;
+  animation: slide-down 1s;
 }
 
 .movies-container::-webkit-scrollbar {
@@ -49,4 +64,14 @@
 .movies-container::-webkit-scrollbar-thumb {
   background-color: var(--primary);
   border-radius: 0.625rem;
+}
+
+@keyframes slide-down {
+  from {
+    margin-top: -20%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
 }

@@ -1,6 +1,6 @@
 .video-post {
   position: relative;
-  width: 14rem;
+  max-width: 20rem;
   min-width: 10rem;
   border-radius: 0.625rem;
   margin: 0 0.625rem;
