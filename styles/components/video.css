@@ -1,7 +1,7 @@
 .video-post {
   position: relative;
   width: 100%;
-  min-width: 10rem;
+  min-width: 12rem;
   border-radius: 0.625rem;
   margin: 0 0.625rem;
   overflow: hidden;
@@ -36,7 +36,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   padding-bottom: 0.325rem;
   background-color: var(--hover-hard);
 }

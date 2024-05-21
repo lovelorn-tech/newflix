@@ -42,7 +42,7 @@
   font-size: 0.875em;
   color: var(--light);
   border: none;
-  background: none;
+  background:none;
   padding: 0.3125em 0.625em;
   border-left: 0.0625rem solid var(--dark);
   overflow: hidden;
@@ -51,6 +51,10 @@
 .footer > ul > li > a {
   height: calc(100% - 0.625em);
 }
+
+/* .listItem > a > i {
+  margin: 0 auto;
+} */
 
 .footer-profile-avatar {
   width: 2.1875rem;

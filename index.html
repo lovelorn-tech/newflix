@@ -11,121 +11,8 @@
     ></script>
   </head>
   <body>
-    <header class="header">
-      <a href="/">NEWFLIX</a>
-      <ul>
-        <li><a href="/">Inicio</a></li>
-        <li id="header-subitem-1" class="header-subitem-1">
-          <span>
-            <p>Explorar</p>
-            <i class="fa-solid fa-caret-down"></i>
-          </span>
-          <ul id="header-subitems-1" class="header-subitems">
-            <li><button>Series y películas</button></li>
-            <li><button>Programas TV</button></li>
-            <li><button>Anime</button></li>
-            <li><button>Reparto</button></li>
-          </ul>
-        </li>
-        <li id="header-subitem-2">
-          <span>
-            <p>Suscripción</p>
-            <i class="fa-solid fa-caret-down"></i>
-          </span>
-          <ul id="header-subitems-2" class="header-subitems">
-            <li><a href="/newflix">Planes y precios</a></li>
-            <li><a href="/newflix">Mi plan actual</a></li>
-            <li><a href="/newflix">Preguntas frecuentes (FAQ)</a></li>
-          </ul>
-        </li>
-        <li id="header-subitem-3">
-          <span>
-            <p>Contacto</p>
-            <i class="fa-solid fa-caret-down"></i>
-          </span>
-          <ul id="header-subitems-3" class="header-subitems">
-            <li><a href="/newflix">Sobre nosotros</a></li>
-            <li><a href="/newflix">Soporte</a></li>
-            <li><a href="/newflix">Política de privacidad</a></li>
-            <li><a href="/newflix">Términos y condiciones</a></li>
-            <li><a href="/newflix">Preguntas frecuentes (FAQ)</a></li>
-          </ul>
-        </li>
-      </ul>
-      <div id="header-right" class="header-right">
-        <div class="form-search-container">
-          <button id="btn-form-opener" class="btn-form-search-opener">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-          <form id="form-search" class="form-search">
-            <input type="text" placeholder="Buscar..." />
-            <button type="submit">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <button id="btn-form-closer" type="button">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-          </form>
-        </div>
-        <button id="btn-nav-opener" class="btn-nav-opener show-mobile">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </header>
-    <nav id="nav" class="nav">
-      <div id="nav-profile" class="nav-profile">
-      </div>
-      <ul>
-        <li>
-          <span><i class="fa-solid fa-house"></i><a href="/">Inicio</a></span>
-        </li>
-        <li>
-          <button id="btn-nav-subitems-1">
-            <span
-              ><i class="fa-solid fa-compass"></i>
-              <p>Explorar</p>
-            </span>
-            <i class="fa-solid fa-caret-right"></i>
-          </button>
-          <ul id="nav-subitems-1" class="nav-subitems">
-            <li><a href="/">Series y películas</a></li>
-            <li><a href="/">Programas TV</a></li>
-            <li><a href="/">Anime</a></li>
-            <li><a href="/">Reparto</a></li>
-          </ul>
-        </li>
-        <li>
-          <button id="btn-nav-subitems-2">
-            <span
-              ><i class="fa-regular fa-credit-card"></i>
-              <p>Suscripción</p>
-            </span>
-            <i class="fa-solid fa-caret-right"></i>
-          </button>
-          <ul id="nav-subitems-2" class="nav-subitems">
-            <li><a href="/">Planes y precios</a></li>
-            <li><a href="/">Mi plan actual</a></li>
-            <li><a href="/">Preguntas frecuentes (FAQ)</a></li>
-          </ul>
-        </li>
-        <li>
-          <button id="btn-nav-subitems-3">
-            <span
-              ><i class="fa-solid fa-headset"></i>
-              <p>Contacto</p>
-            </span>
-            <i class="fa-solid fa-caret-right"></i>
-          </button>
-          <ul id="nav-subitems-3" class="nav-subitems">
-            <li><a href="/">Sobre nosotros</a></li>
-            <li><a href="/">Soporte</a></li>
-            <li><a href="/">Política de privacidad</a></li>
-            <li><a href="/">Términos y condiciones</a></li>
-            <li><a href="/">Preguntas frecuentes (FAQ)</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <header id="header" class="header"></header>
+    <nav id="nav" class="nav"></nav>
     <main class="main home-main">
       <div class="home-page">
         <div class="movies-container">
@@ -146,39 +33,7 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
-      <ul>
-        <li>
-          <a href="/">
-            <i class="fa-solid fa-house"></i>
-            <p>Inicio</p>
-          </a>
-        </li>
-        <li>
-          <a href="/">
-            <i class="fa-solid fa-layer-group"></i>
-            <p>Biblioteca</p>
-          </a>
-        </li>
-        <li>
-          <a href="/">
-            <i class="fa-solid fa-plus"></i>
-            <p>Publicar</p>
-          </a>
-        </li>
-        <li>
-          <button>
-            <i class="fa-solid fa-bell"></i>
-            <p>Notif.</p>
-          </button>
-        </li>
-        <li>
-          <a id="footer-profile" href="/newflix">
-            
-          </a>
-        </li>
-      </ul>
-    </footer>
+    <footer id="footer" class="footer"></footer>
     <script type="text/javascript" src="./scripts/pages/main.js" defer></script>
   </body>
 </html>

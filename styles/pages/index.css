@@ -41,9 +41,11 @@
 }
 
 .movie-list-feed {
+  width: 100%;
+  max-width: calc(100% - 1.125rem);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  gap: 0.625rem;
+  gap: 1rem;
   padding: 0.625rem 0;
   animation: slide-down 1s;
 }

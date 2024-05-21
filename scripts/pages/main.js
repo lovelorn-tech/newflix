@@ -16,6 +16,7 @@ async function importJSFiles() {
 function onLoad() {
   const loadData = async () => {
     await importJSFiles();
+
     const movieListElement = document.querySelectorAll(".movie-list");
     movieListElement.forEach((element) => {
       element.innerHTML = videoService.getVideoListHTML(movies);
@@ -24,15 +25,14 @@ function onLoad() {
     const movieFeedElement = document.getElementById('movie-list-feed');
     movieFeedElement.innerHTML = videoService.getVideoListHTML(movies);
 
-    const headerRightElement = document.getElementById("header-right");
-    headerRightElement.appendChild(await headerService.getHeaderProfile());
-    await headerService.addEvents();
+    const header = document.getElementById("header");
+    header.parentNode.replaceChild(await headerService.getHeader(), header);
 
-    const navProfile = document.getElementById("nav-profile");
-    navProfile.innerHTML = await navService.getNavProfile();
+    const nav = document.getElementById("nav");
+    nav.parentNode.replaceChild(await navService.getNav(), nav);
 
-    const footerProfile = document.getElementById("footer-profile");
-    footerProfile.innerHTML = await footerService.getFooterProfile();
+    const footer = document.getElementById("footer");
+    footer.parentNode.replaceChild(await footerService.getFooter(), footer);
   };
   if (!documentReady) loadData();
   documentReady = true;

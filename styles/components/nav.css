@@ -69,7 +69,6 @@
   border-bottom: 0.0625rem solid var(--primary);
 }
 
-.nav > ul > li > span,
 .nav > ul > li > a,
 .nav > ul > li > button {
   text-decoration: none;
@@ -85,14 +84,9 @@
   cursor: pointer;
 }
 
-.nav > ul > li > span,
 .nav > ul > li > a {
   width: calc(100% - 1.25rem);
-}
-
-.nav > ul > li > span > a {
-  text-decoration: none;
-  color: var(--light);
+  justify-content: flex-start;
 }
 
 .nav > ul > li > span {
@@ -105,7 +99,6 @@
   justify-content: flex-start;
 }
 
-.nav > ul > li > span > a,
 .nav > ul > li > button > span > p {
   padding-left: 0.625em;
 }
