@@ -18,20 +18,6 @@ export const headerService = {
     return header;
   },
   addEvents: async () => {
-    const displayService = (await import("../services/display.js"))
-      .displayService;
-
-    document
-      .getElementById("profile-dropdown")
-      ?.addEventListener("blur", (e) => {
-        displayService.hideOnBlurElement(e, "profile-dropdown");
-      });
-
-    document
-      .getElementById("btn-header-profile")
-      ?.addEventListener("click", () => {
-        displayService.displayElement("profile-dropdown");
-      });
   },
 };
 
@@ -217,25 +203,35 @@ async function getHeaderProfile() {
 
   if ((await import("../services/session.js")).sessionService.isSession()) {
     const session = sessionService.getSession();
-    element = document.createElement("div");
+    const element = document.createElement("div");
     element.className = "btn-header-profile";
+    element.id = "btn-header-profile";
 
     const btnProfile = document.createElement("button");
     btnProfile.classList = "header-profile-avatar";
-    btnProfile.id = "btn-header-profile";
+    btnProfile.id = "header-profile-avatar";
     btnProfile.innerHTML = `<img src="${ROOT_PATH}/assets/img/avatar.webp" alt="avatar" />`;
+    element.addEventListener("click", () => {
+      displayService.displayElement("profile-dropdown");
+    });
 
     element.appendChild(btnProfile);
+
     const profileMenu = document.createElement("ul");
     profileMenu.classList = "profile-menu";
     profileMenu.id = "profile-dropdown";
     profileMenu.tabIndex = -1;
+    profileMenu.addEventListener("blur", (e) => {
+      displayService.hideOnBlurElement(e, "profile-dropdown");
+    });
+
+    element.appendChild(profileMenu);
 
     const profileMenuItemOne = document.createElement("li");
     profileMenuItemOne.innerHTML = `
       <div class="header-profile-info">
         <div class="header-profile-info-avatar">
-          <img src="./mocks/img/avatar.webp" alt="avatar" />
+          <img src="${ROOT_PATH}/assets/img/avatar.webp" alt="avatar" />
         </div>
         <p>${session?.nickname}</p>
       </div>
@@ -249,8 +245,10 @@ async function getHeaderProfile() {
     profileLogOutBtn.innerHTML = `<p>Cerrar sesión</p>`;
     profileLogOutBtn.addEventListener("click", async (e) => {
       await authService.logout();
-      window.open("/newflix", "_self");
+      window.open(`${ROOT_PATH}/`, "_self");
     });
+
+    profileMenuItemLast.appendChild(profileLogOutBtn);
 
     const items = [
       { href: `${ROOT_PATH}/`, text: "Mi cuenta" },
@@ -264,6 +262,7 @@ async function getHeaderProfile() {
       profileMenu.appendChild(listService.createLinkItem(item.href, item.text));
     });
     profileMenu.appendChild(profileMenuItemLast);
+    headerRight.appendChild(element);
   } else {
     const loginAnchor = document.createElement("a");
     loginAnchor.classList = "anchor-auth";
