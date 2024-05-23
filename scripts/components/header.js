@@ -32,27 +32,6 @@ export const headerService = {
       ?.addEventListener("click", () => {
         displayService.displayElement("profile-dropdown");
       });
-
-    document.addEventListener("click", (e) => {
-      const target = e.target.closest("#btn-nav-subitems-1");
-      if (target) {
-        displayService.displayElement("nav-subitems-1");
-      }
-    });
-
-    document.addEventListener("click", (e) => {
-      const target = e.target.closest("#btn-nav-subitems-2");
-      if (target) {
-        displayService.displayElement("nav-subitems-2");
-      }
-    });
-
-    document.addEventListener("click", (e) => {
-      const target = e.target.closest("#btn-nav-subitems-3");
-      if (target) {
-        displayService.displayElement("nav-subitems-3");
-      }
-    });
   },
 };
 
@@ -244,7 +223,7 @@ async function getHeaderProfile() {
     const btnProfile = document.createElement("button");
     btnProfile.classList = "header-profile-avatar";
     btnProfile.id = "btn-header-profile";
-    btnProfile.innerHTML = `<img src="./mocks/img/avatar.webp" alt="avatar" />`;
+    btnProfile.innerHTML = `<img src="${ROOT_PATH}/assets/img/avatar.webp" alt="avatar" />`;
 
     element.appendChild(btnProfile);
     const profileMenu = document.createElement("ul");

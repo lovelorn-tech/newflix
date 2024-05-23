@@ -37,7 +37,7 @@ async function getFooterProfile() {
   if ((await import("../services/session.js")).sessionService.isSession()) {
     const session = sessionService.getSession();
     profileAnchor.innerHTML = `<div class="footer-profile-avatar">
-      <img src="./mocks/img/avatar.webp" alt="avatar" />
+      <img src="${ROOT_PATH}/assets/img/avatar.webp" alt="avatar" />
       </div>
       <p>${session?.nickname}</p>`;
     profileAnchor.href = `${ROOT_PATH}/`;

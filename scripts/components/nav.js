@@ -1,11 +1,13 @@
 import { ROOT_PATH } from "../services/environment.js";
 import { sessionService } from "../services/session.js";
 import { listService } from "./list.js";
+const displayService = (await import("../services/display.js")).displayService;
 
 export const navService = {
   getNav: async () => {
     const nav = document.createElement("nav");
     nav.classList = "nav";
+    nav.id = "nav";
 
     const navProfile = await getNavProfile();
     if (navProfile !== null) {
@@ -106,6 +108,19 @@ export const navService = {
     liItemThree.appendChild(subUlItemThree);
     ul.appendChild(liItemThree);
 
+    // Add events
+    buttonLiOne.addEventListener("click", (e) => {
+      displayService.displayElement("nav-subitems-1");
+    });
+
+    buttonLiTwo.addEventListener("click", (e) => {
+      displayService.displayElement("nav-subitems-2");
+    });
+
+    buttonLiThree.addEventListener("click", (e) => {
+      displayService.displayElement("nav-subitems-3");
+    });
+
     nav.appendChild(ul);
     return nav;
   },
@@ -119,7 +134,7 @@ async function getNavProfile() {
     navProfile = document.createElement("div");
     navProfile.classList = "nav-profile";
     navProfile.innerHTML = `<div class="nav-profile-avatar">
-      <img src="./mocks/img/avatar.webp" />
+      <img src="${ROOT_PATH}/assets/img/avatar.webp" />
       </div>
       <p>${session?.nickname}</p>`;
   }
