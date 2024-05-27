@@ -5,4 +5,4 @@ const environment = {
 
 export const ROOT_PATH = function getPath(isDev = true){
     return isDev ? environment.DEV_PATH : environment.PROD_PATH
-}();
+}(false);
